@@ -1,9 +1,9 @@
 <!-- <h1>display{{message}}</h1> -->
 {% extends 'base.html'%} {% block content %}
 <body>
-    div class="container"
-    div class="row"
-    div class=""
+    <div class="container">
+    <div class="row">
+    <div class="columns">
     <br>
     <br>	
     <br>  
@@ -16,5 +16,11 @@
             <a href="/article/{{source.id}}">{{source.id}}</a>
         {% endfor %}
     </ul>
-    {% endblock %}
+    </div>
+    </div>
+    </div>
+    <div class="columns">
+    </div>
 </body>
+    {% endblock %}
+
