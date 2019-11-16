@@ -1,0 +1,9 @@
+<h1>NEWS{{ name }}</h1>
+<body>
+    <h3>Articles</h3>
+    <ul>
+        {% for article in articles %}
+            <li>{{ article.author}}</li>
+        {% endfor %}
+    </ul>
+</body>
