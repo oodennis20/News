@@ -1,6 +1,5 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-
 from flask import render_template,request,redirect,url_for
 from ..request import get_source,article_source,get_category,get_headlines
 
@@ -15,7 +14,7 @@ def index():
     return render_template('index.html',sources=source, headlines = headlines)
 
 @main.route('/article/<id>')
-def article(source_id):
+def article(id):
     '''
     view article page function that returns article details page and its data
     '''
@@ -35,7 +34,7 @@ def category(cat_name):
     title = f'{cat_name}'
     cat = cat_name
     # source = get_categories()
-    return render_template('category.html',title = title,category=category, cat= cat_name)
+    return render_template('categories.html',title = title,category=category, cat= cat_name)
 
 
 
