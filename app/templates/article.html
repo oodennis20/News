@@ -1,14 +1,10 @@
 {% extends 'base.html'%}
-<!-- {% import 'macros.html' as macro%} -->
-<body>
+
     <br>
     <br>
-    <h3>Articles from {{id}}</h3>
-    <!-- <ul>
-        {% for article in articles %}
-            <li>{{ article.image}}</li>
-        {% endfor %}
-    </ul> -->
+    <body>
+    <h1 align="center" class="text-capitalize"> {{id}} </h3>
+   
     <div class="container">
         <div class="card-columns">
             {% for article in articles %}
