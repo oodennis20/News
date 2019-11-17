@@ -1,26 +1,71 @@
 <!-- <h1>display{{message}}</h1> -->
 {% extends 'base.html'%} {% block content %}
+<br>
+<br>
+<br> {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
+
 <body>
-    <div class="container">
-    <div class="row">
-    <div class="columns">
-    <br>
-    <br>	
-    <br>  
-    <!-- sources section  -->
-    <h3> Sources</h3>
-    <br>
-     <ul>
-        {% for source in sources %}
-            <li>{{ source.name}}</li>
-            <a href="/article/{{source.id}}">{{source.id}}</a>
-        {% endfor %}
-    </ul>
-    </div>
-    </div>
-    </div>
-    <div class="columns">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3> News Sources</h3>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <ul>
+                            {% for source in sources %}
+                            <a href="/article/{{source.id}}">{{source.id}}</a>
+                            <br> {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <h1>FIRST LINE</h1> So many words, so many words. So many words, so many words. So many words, so many words.
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-    {% endblock %}
+{% endblock %}
+
+<div class="main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                <div class="card-header">
+                    <h3> News Sources</h3>
+                </div>
+                <div class="list-group list-group-flush">
+                    <ul>
+                    {% for source in sources %}
+                    <a href="/article/{{source.id}}">{{source.id}}</a>
+                    <br> {% endfor %}
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <h1>FIRST LINE</h1> So many words, so many words. So many words, so many words. So many words, so many words.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
