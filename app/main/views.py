@@ -33,9 +33,9 @@ def category(cat_name):
     category = get_category(cat_name)
     # print (category)
     title = f'{cat_name}'
-    m=cat_name
+   
     # source = get_categories()
-    return render_template('category.html',title = title,m=m, category=category)
+    return render_template('category.html',title = title,category=category)
 
 
 
