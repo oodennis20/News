@@ -1,7 +1,8 @@
 from flask import render_template
 from app import app
-from .request import get_source,article_source, get_category
 from flask import render_template,request,redirect,url_for
+from .request import get_source,article_source, get_category
+
 #our views
 @app.route('/')
 def index():
