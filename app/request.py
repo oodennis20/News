@@ -10,7 +10,7 @@ cat_url= None
 
 def configure_request(app):
     global api_key, source_url, cat_url
-    api_key = app.config['NEWS_API_KEY']
+    api_key ='d375c375d9414540b4b87ffc36728e98'
     source_url= app.config['NEWS_API_SOURCE_URL']
     cat_url=app.config['CAT_API_URL']
 
@@ -19,7 +19,7 @@ def get_source():
     '''
     Function that gets the json response to url request
     '''
-    get_source_url= source_url.format(api_key)
+    get_source_url= source_url.format('d375c375d9414540b4b87ffc36728e98')
     # print(get_source_url)
     with urllib.request.urlopen(get_source_url) as url:
         get_sources_data = url.read()
